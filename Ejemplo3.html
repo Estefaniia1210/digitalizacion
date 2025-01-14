@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleccionar por clase</title>
+</head>
+<body>
+    <div class="resaltado">Primero</div>
+    <div class="resaltado">Segundo</div> <!-- Se corrigió la clase aquí -->
+    <div class="resaltado">Tercero</div>
+    <button onclick="cambiarColor();">Cambiar el color</button>
+    <button onclick="quitarColor();">Quitar color</button>
+
+    <script>
+      function cambiarColor(){
+        const elementos = document.getElementsByClassName('resaltado');
+        console.log(typeof elementos);
+        elementos[0].style.color = 'red';
+      }
+      function quitarColor(){
+        const elementos = document.getElementsByClassName('resaltado');
+        console.log(typeof elementos);
+        elementos[0].style.color = 'black';
+      }
+    </script>
+</body>
+</html>
